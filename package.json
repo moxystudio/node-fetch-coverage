@@ -1,7 +1,7 @@
 {
   "name": "fetch-coverage",
   "version": "1.0.2",
-  "description": "Fetch the coverage % from an open-source GIT repository, using a variety of common coverage services.",
+  "description": "Fetch the code coverage from an open-source GIT repository, using a variety of well-known coverage services",
   "main": "index.js",
   "scripts": {
     "lint": "eslint '{*.js,test/**/*.js}' --ignore-pattern=test/coverage",

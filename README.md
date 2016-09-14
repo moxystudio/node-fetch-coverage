@@ -14,9 +14,11 @@
 [david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-fetch-coverage#info=devDependencies
 [david-dm-dev-image]:https://img.shields.io/david/dev/IndigoUnited/node-fetch-coverage.svg
 
-Fetch the coverage % from an open-source GIT repository, using a variety of common coverage services.
+Fetch the code coverage from an open-source GIT repository, using a variety of well-known coverage services.
 
 Currently supports GitHub, Bitbucket and GitLab repositories and checks against [Coveralls](https://coveralls.io/), [Code Climate](https://codeclimate.com/), [Scrutinizer](https://scrutinizer-ci.com/) and [Codecov](https://codecov.io/).
+
+Feel free to make a PR adding support for another coverage service.
 
 
 ## Installation
@@ -32,7 +34,8 @@ Currently supports GitHub, Bitbucket and GitLab repositories and checks against 
 const fetchCoverage = require('fetch-coverage');
 
 fetchCoverage('git@github.com:IndigoUnited/node-planify.git')
-.then((coverage) => console.log('Coverage', coverage));  // Coverage between 0 and 1
+ // `coverage` is a number between 0 and 1 or `null` if there's no code coverage
+.then((coverage) => console.log('Coverage', coverage));
 ```
 
 The `repositoryUrl` is any valid cloneable URL.
@@ -42,7 +45,7 @@ Available options:
 - `branch`: The target branch (only supported in some services)
 - `services`: The services to fetch from, defaults to all services
 - `got`: Custom options to be passed to [got](https://github.com/sindresorhus/got), defaults to `{ timeout: 15000 }`
-- `badges`: The badges information gathered by [detect-readme-badges](https://github.com/IndigoUnited/node-detect-readme-badges) which might speed up the coverage fetching
+- `badges`: The badges information gathered by [detect-readme-badges](https://github.com/IndigoUnited/node-detect-readme-badges) which might speed up the  fetching process
 
 
 ## Tests
