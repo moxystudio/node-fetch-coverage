@@ -16,7 +16,7 @@
 
 Fetch the coverage % from an open-source node repository, using a variety of common coverage services.
 
-Currently supports GitHub, Bitbucket and Gitlab repositories and checks against [Coveralls](https://coveralls.io/), [Code Climate](https://codeclimate.com/), [Scrutinizer](https://scrutinizer-ci.com/) and [CodeCov](https://codecov.io/).
+Currently supports GitHub, Bitbucket and Gitlab repositories and checks against [Coveralls](https://coveralls.io/), [Code Climate](https://codeclimate.com/), [Scrutinizer](https://scrutinizer-ci.com/) and [Codecov](https://codecov.io/).
 
 
 ## Installation
