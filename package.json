@@ -1,6 +1,6 @@
 {
   "name": "fetch-coverage",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Fetch the coverage % from an open-source repository, using a variety of common coverage services.",
   "main": "index.js",
   "scripts": {
