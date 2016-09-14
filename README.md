@@ -14,7 +14,7 @@
 [david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-fetch-coverage#info=devDependencies
 [david-dm-dev-image]:https://img.shields.io/david/dev/IndigoUnited/node-fetch-coverage.svg
 
-Fetch the coverage % from an open-source repository, using a variety of common coverage services.
+Fetch the coverage % from an open-source GIT repository, using a variety of common coverage services.
 
 Currently supports GitHub, Bitbucket and GitLab repositories and checks against [Coveralls](https://coveralls.io/), [Code Climate](https://codeclimate.com/), [Scrutinizer](https://scrutinizer-ci.com/) and [Codecov](https://codecov.io/).
 
@@ -31,7 +31,7 @@ Currently supports GitHub, Bitbucket and GitLab repositories and checks against 
 ```js
 const fetchCoverage = require('fetch-coverage');
 
-fetchCoverage('git@github.com:IndigoUnited/node-planify')
+fetchCoverage('git@github.com:IndigoUnited/node-planify.git')
 .then((coverage) => console.log('Coverage', coverage));  // Coverage between 0 and 1
 ```
 
