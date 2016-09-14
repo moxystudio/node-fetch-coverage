@@ -1,0 +1,46 @@
+{
+  "name": "fetch-coverage",
+  "version": "0.1.0",
+  "description": "Fetch the coverage % from an open-source node repository, using a variety of common coverage services.",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint '{*.js,test/**/*.js}' --ignore-pattern=test/coverage",
+    "test": "mocha --bail",
+    "test-cov": "istanbul cover --dir test/coverage _mocha -- && echo Coverage lies in test/coverage/lcov-report/index.html",
+    "test-travis": "istanbul cover _mocha --report lcovonly -- && cat ./coverage/lcov.info | ./node_modules/coveralls/bin/coveralls.js"
+  },
+  "bugs": {
+    "url": "https://github.com/IndigoUnited/node-fetch-coverage/issues/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/IndigoUnited/node-fetch-coverage.git"
+  },
+  "keywords": [
+    "coverage",
+    "test",
+    "shields",
+    "shields.io"
+  ],
+  "author": "IndigoUnited <hello@indigounited.com> (http://indigounited.com)",
+  "license": "MIT",
+  "dependencies": {
+    "got": "^6.5.0",
+    "hosted-git-info": "^2.1.5",
+    "lodash.find": "^4.6.0",
+    "require-directory": "^2.1.1"
+  },
+  "devDependencies": {
+    "@satazor/eslint-config": "^3.0.0",
+    "chai": "^3.4.1",
+    "coveralls": "^2.11.6",
+    "eslint": "^3.0.0",
+    "istanbul": "^0.4.1",
+    "lodash": "^4.15.0",
+    "mocha": "^2.3.4",
+    "nock": "^8.0.0"
+  },
+  "engines": {
+    "node": ">=4.0.0"
+  }
+}
