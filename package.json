@@ -1,6 +1,6 @@
 {
   "name": "fetch-coverage",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Fetch the code coverage from an open-source GIT repository, using a variety of well-known coverage services",
   "main": "index.js",
   "scripts": {
