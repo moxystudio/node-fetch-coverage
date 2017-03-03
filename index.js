@@ -56,7 +56,7 @@ function fetchCoverage(repositoryUrl, options) {
     options = Object.assign({
         branch: null,
         badges: null,
-        services: ['coveralls', 'codeclimate', 'scrutinizer'],
+        services: ['codecov', 'coveralls', 'codeclimate', 'scrutinizer'],
         got: { timeout: 15000 },
     }, options);
 
