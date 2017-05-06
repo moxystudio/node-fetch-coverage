@@ -11,7 +11,7 @@
 [coveralls-image]:https://img.shields.io/coveralls/IndigoUnited/node-fetch-coverage/master.svg
 [david-dm-url]:https://david-dm.org/IndigoUnited/node-fetch-coverage
 [david-dm-image]:https://img.shields.io/david/IndigoUnited/node-fetch-coverage.svg
-[david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-fetch-coverage#info=devDependencies
+[david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-fetch-coverage?type=dev
 [david-dm-dev-image]:https://img.shields.io/david/dev/IndigoUnited/node-fetch-coverage.svg
 
 Fetch the code coverage from an open-source GIT repository, using a variety of well-known coverage services.
