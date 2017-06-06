@@ -1,8 +1,6 @@
 # fetch-coverage
 
-[![Greenkeeper badge](https://badges.greenkeeper.io/IndigoUnited/node-fetch-coverage.svg)](https://greenkeeper.io/)
-
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url] [![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
 
 [npm-url]:https://npmjs.org/package/fetch-coverage
 [downloads-image]:http://img.shields.io/npm/dm/fetch-coverage.svg
@@ -15,6 +13,8 @@
 [david-dm-image]:https://img.shields.io/david/IndigoUnited/node-fetch-coverage.svg
 [david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-fetch-coverage?type=dev
 [david-dm-dev-image]:https://img.shields.io/david/dev/IndigoUnited/node-fetch-coverage.svg
+[greenkeeper-image]:https://badges.greenkeeper.io/IndigoUnited/node-fetch-coverage..svg
+[greenkeeper-url]:https://greenkeeper.io/
 
 Fetch the code coverage from an open-source GIT repository, using a variety of well-known coverage services.
 
