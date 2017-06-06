@@ -28,7 +28,7 @@
   "author": "IndigoUnited <hello@indigounited.com> (http://indigounited.com)",
   "license": "MIT",
   "dependencies": {
-    "got": "^6.5.0",
+    "got": "^7.0.0",
     "hosted-git-info": "^2.1.5",
     "lodash.find": "^4.6.0",
     "require-directory": "^2.1.1"
