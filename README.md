@@ -13,7 +13,7 @@
 [david-dm-image]:https://img.shields.io/david/IndigoUnited/node-fetch-coverage.svg
 [david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-fetch-coverage?type=dev
 [david-dm-dev-image]:https://img.shields.io/david/dev/IndigoUnited/node-fetch-coverage.svg
-[greenkeeper-image]:https://badges.greenkeeper.io/IndigoUnited/node-fetch-coverage..svg
+[greenkeeper-image]:https://badges.greenkeeper.io/IndigoUnited/node-fetch-coverage.svg
 [greenkeeper-url]:https://greenkeeper.io/
 
 Fetch the code coverage from an open-source GIT repository, using a variety of well-known coverage services.
