@@ -5,15 +5,15 @@
 [npm-url]:https://npmjs.org/package/fetch-coverage
 [downloads-image]:http://img.shields.io/npm/dm/fetch-coverage.svg
 [npm-image]:http://img.shields.io/npm/v/fetch-coverage.svg
-[travis-url]:https://travis-ci.org/IndigoUnited/node-fetch-coverage
-[travis-image]:http://img.shields.io/travis/IndigoUnited/node-fetch-coverage/master.svg
+[travis-url]:https://travis-ci.org/moxystudio/node-fetch-coverage
+[travis-image]:http://img.shields.io/travis/moxystudio/node-fetch-coverage/master.svg
 [codecov-url]:https://codecov.io/gh/moxystudio/node-fetch-coverage
 [codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/node-fetch-coverage/master.svg
-[david-dm-url]:https://david-dm.org/IndigoUnited/node-fetch-coverage
-[david-dm-image]:https://img.shields.io/david/IndigoUnited/node-fetch-coverage.svg
-[david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-fetch-coverage?type=dev
-[david-dm-dev-image]:https://img.shields.io/david/dev/IndigoUnited/node-fetch-coverage.svg
-[greenkeeper-image]:https://badges.greenkeeper.io/IndigoUnited/node-fetch-coverage.svg
+[david-dm-url]:https://david-dm.org/moxystudio/node-fetch-coverage
+[david-dm-image]:https://img.shields.io/david/moxystudio/node-fetch-coverage.svg
+[david-dm-dev-url]:https://david-dm.org/moxystudio/node-fetch-coverage?type=dev
+[david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/node-fetch-coverage.svg
+[greenkeeper-image]:https://badges.greenkeeper.io/moxystudio/node-fetch-coverage.svg
 [greenkeeper-url]:https://greenkeeper.io/
 
 Fetch the code coverage from an open-source GIT repository, using a variety of well-known coverage services.
@@ -37,7 +37,7 @@ $ npm install fetch-coverage
 ```js
 const fetchCoverage = require('fetch-coverage');
 
-fetchCoverage('git@github.com:IndigoUnited/node-planify.git')
+fetchCoverage('git@github.com:moxystudio/node-planify.git')
  // `coverage` is a number between 0 and 1 or `null` if there's no code coverage
 .then((coverage) => console.log('Coverage', coverage));
 ```
