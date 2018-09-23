@@ -1,12 +1,11 @@
 'use strict';
 
 const hostedGitInfo = require('hosted-git-info');
-const find = require('lodash.find');
 const fetchers = require('require-directory')(module, './lib', { recurse: false });
 const shieldsIo = require('./lib/util/shieldsIo');
 
 function tryBadges(options) {
-    const coverageBadge = find(options.badges, (badge) => badge.info.type === 'coverage');
+    const coverageBadge = options.badges && options.badges.find((badge) => badge.info.type === 'coverage');
     const shieldsIoUrl = coverageBadge && coverageBadge.urls.content;
 
     return shieldsIoUrl ? shieldsIo.request(shieldsIoUrl, options) : Promise.resolve(false);
@@ -15,14 +14,14 @@ function tryBadges(options) {
 function tryServices(gitInfo, options) {
     const errors = [];
 
-    const promises = options.services.map((service) => {
-        return fetchers[service] && fetchers[service](gitInfo, options)
-        .catch((err) => { errors.push(err); });
-    });
+    const promises = options.services.map((service) =>
+        fetchers[service] && fetchers[service](gitInfo, options)
+        .catch((err) => { errors.push(err); })
+    );
 
     return Promise.all(promises)
     .then((coverages) => {
-        const coverage = find(coverages, (coverage) => coverage != null);
+        const coverage = coverages.find((coverage) => coverage != null);
 
         if (coverage != null) {
             return coverage;
@@ -46,19 +45,21 @@ function fetchCoverage(repositoryUrl, options) {
     try {
         gitInfo = hostedGitInfo.fromUrl(repositoryUrl);
     } catch (err) {
-        return Promise.resolve(null);
+        /* istanbul ignore next */
+        return null;
     }
 
     if (!gitInfo) {
-        return Promise.resolve(null);
+        return null;
     }
 
-    options = Object.assign({
+    options = {
         branch: null,
         badges: null,
         services: ['codecov', 'coveralls', 'codeclimate', 'scrutinizer'],
         got: { timeout: 15000 },
-    }, options);
+        ...options,
+    };
 
     // Try fetching the coverage from the coverage badge if any
     return tryBadges(options)

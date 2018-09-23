@@ -1,14 +1,14 @@
 # fetch-coverage
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url] [![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url] [![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
 
 [npm-url]:https://npmjs.org/package/fetch-coverage
 [downloads-image]:http://img.shields.io/npm/dm/fetch-coverage.svg
 [npm-image]:http://img.shields.io/npm/v/fetch-coverage.svg
 [travis-url]:https://travis-ci.org/IndigoUnited/node-fetch-coverage
 [travis-image]:http://img.shields.io/travis/IndigoUnited/node-fetch-coverage/master.svg
-[coveralls-url]:https://coveralls.io/r/IndigoUnited/node-fetch-coverage
-[coveralls-image]:https://img.shields.io/coveralls/IndigoUnited/node-fetch-coverage/master.svg
+[codecov-url]:https://codecov.io/gh/moxystudio/node-fetch-coverage
+[codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/node-fetch-coverage/master.svg
 [david-dm-url]:https://david-dm.org/IndigoUnited/node-fetch-coverage
 [david-dm-image]:https://img.shields.io/david/IndigoUnited/node-fetch-coverage.svg
 [david-dm-dev-url]:https://david-dm.org/IndigoUnited/node-fetch-coverage?type=dev
@@ -25,7 +25,9 @@ Feel free to make a PR adding support for another coverage service.
 
 ## Installation
 
-`$ npm install fetch-coverage`
+```sh
+$ npm install fetch-coverage
+```
 
 
 ## Usage
@@ -52,8 +54,10 @@ Available options:
 
 ## Tests
 
-`$ npm test`   
-`$ npm test-cov` to get coverage report
+```sh
+$ npm test
+$ npm test -- --watch # during development
+```
 
 
 ## License
