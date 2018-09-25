@@ -46,11 +46,11 @@ function fetchCoverage(repositoryUrl, options) {
         gitInfo = hostedGitInfo.fromUrl(repositoryUrl);
     } catch (err) {
         /* istanbul ignore next */
-        return null;
+        return Promise.resolve(null);
     }
 
     if (!gitInfo) {
-        return null;
+        return Promise.resolve(null);
     }
 
     options = {

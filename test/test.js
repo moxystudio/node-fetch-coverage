@@ -11,12 +11,16 @@ afterEach(() => {
 it('should return null if repository is not supported or if the URL is malformed', async () => {
     nock.disableNetConnect();
 
-    let coverage = await fetchCoverage('git@foo.com:user/project.git');
+    let promise = fetchCoverage('git@foo.com:user/project.git');
+    let coverage = await promise;
 
+    expect(promise instanceof Promise).toBe(true);
     expect(coverage).toBe(null);
 
-    coverage = await fetchCoverage('git://github.com/balderdashy/waterline-%s.git');
+    promise = fetchCoverage('git://github.com/balderdashy/waterline-%s.git');
+    coverage = await promise;
 
+    expect(promise instanceof Promise).toBe(true);
     expect(coverage).toBe(null);
 });
 
