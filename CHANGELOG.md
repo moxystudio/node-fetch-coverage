@@ -2,6 +2,16 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+<a name="2.0.1"></a>
+## [2.0.1](https://github.com/moxystudio/node-fetch-coverage/compare/v2.0.0...v2.0.1) (2018-09-25)
+
+
+### Bug Fixes
+
+* fix promises not being returned in all cases ([380f611](https://github.com/moxystudio/node-fetch-coverage/commit/380f611))
+
+
+
 <a name="2.0.0"></a>
 # 2.0.0 (2018-09-23)
 
