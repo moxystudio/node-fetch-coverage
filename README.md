@@ -1,6 +1,6 @@
 # fetch-coverage
 
-[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url] [![Greenkeeper badge][greenkeeper-image]][greenkeeper-url]
+[![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url] 
 
 [npm-url]:https://npmjs.org/package/fetch-coverage
 [downloads-image]:http://img.shields.io/npm/dm/fetch-coverage.svg
@@ -13,8 +13,6 @@
 [david-dm-image]:https://img.shields.io/david/moxystudio/node-fetch-coverage.svg
 [david-dm-dev-url]:https://david-dm.org/moxystudio/node-fetch-coverage?type=dev
 [david-dm-dev-image]:https://img.shields.io/david/dev/moxystudio/node-fetch-coverage.svg
-[greenkeeper-image]:https://badges.greenkeeper.io/moxystudio/node-fetch-coverage.svg
-[greenkeeper-url]:https://greenkeeper.io/
 
 Fetch the code coverage from an open-source GIT repository, using a variety of well-known coverage services.
 
