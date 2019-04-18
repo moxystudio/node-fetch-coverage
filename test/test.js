@@ -28,7 +28,7 @@ it('should try appropriate services for GitHub repositories', async () => {
     nock('https://img.shields.io')
     .get('/coveralls/IndigoUnited/node-planify.json')
     .reply(200, { name: 'coverage', value: '88%' })
-    .get('/codeclimate/coverage/github/IndigoUnited/node-planify.json')
+    .get('/codeclimate/coverage/IndigoUnited/node-planify.json')
     .reply(200, { name: 'coverage', value: '89%' });
 
     const coverage = await fetchCoverage('git@github.com:IndigoUnited/node-planify.git', { services: ['coveralls', 'codeclimate'] });
@@ -39,7 +39,7 @@ it('should try appropriate services for GitHub repositories', async () => {
 
 it('should try appropriate services for Bitbucket repositories', async () => {
     nock('https://img.shields.io')
-    .get('/codeclimate/coverage/bitbucket/IndigoUnited/node-planify.json')
+    .get('/codeclimate/coverage/IndigoUnited/node-planify.json')
     .reply(200, { name: 'coverage', value: '88%' })
     .get('/scrutinizer/coverage/b/IndigoUnited/node-planify.json')
     .reply(200, { name: 'coverage', value: '89%' });
@@ -53,7 +53,7 @@ it('should try appropriate services for Bitbucket repositories', async () => {
 
 it('should try appropriate services for GitLab repositories', async () => {
     nock('https://img.shields.io')
-    .get('/codeclimate/coverage/gitlab/IndigoUnited/node-planify.json')
+    .get('/codeclimate/coverage/IndigoUnited/node-planify.json')
     .reply(200, { name: 'coverage', value: '89%' });
 
     const coverage = await fetchCoverage('git@gitlab.com:IndigoUnited/node-planify.git',
@@ -67,7 +67,7 @@ it('should ignore service errors if at least one succeed', async () => {
     nock('https://img.shields.io')
     .get('/coveralls/IndigoUnited/node-planify.json')
     .reply(500)
-    .get('/codeclimate/coverage/github/IndigoUnited/node-planify.json')
+    .get('/codeclimate/coverage/IndigoUnited/node-planify.json')
     .reply(200, { name: 'coverage', value: '89%' });
 
     const coverage = await fetchCoverage('git@github.com:IndigoUnited/node-planify.git', { services: ['coveralls', 'codeclimate'] });
@@ -80,7 +80,7 @@ it('should return null if no coverage is present in all services', async () => {
     nock('https://img.shields.io')
     .get('/coveralls/IndigoUnited/node-planify.json')
     .reply(200, { name: 'coverage', value: 'unknown' })
-    .get('/codeclimate/coverage/github/IndigoUnited/node-planify.json')
+    .get('/codeclimate/coverage/IndigoUnited/node-planify.json')
     .reply(200, { name: 'coverage', value: 'invalid' });
 
     const coverage = await fetchCoverage('git@github.com:IndigoUnited/node-planify.git', { services: ['coveralls', 'codeclimate'] });
@@ -93,7 +93,7 @@ it('should fail if all services fail', async () => {
     nock('https://img.shields.io')
     .get('/coveralls/IndigoUnited/node-planify.json')
     .reply(500)
-    .get('/codeclimate/coverage/github/IndigoUnited/node-planify.json')
+    .get('/codeclimate/coverage/IndigoUnited/node-planify.json')
     .reply(500);
 
     expect.assertions(2);
@@ -131,7 +131,7 @@ it('should use the specified options.branch', async () => {
     nock('https://img.shields.io')
     .get('/coveralls/IndigoUnited/node-planify/some-branch.json')
     .reply(200, { name: 'coverage', value: '88%' })
-    .get('/codeclimate/coverage/github/IndigoUnited/node-planify.json') // No branch support
+    .get('/codeclimate/coverage/IndigoUnited/node-planify.json') // No branch support
     .reply(200, { name: 'coverage', value: '89%' })
     .get('/scrutinizer/coverage/g/IndigoUnited/node-planify/some-branch.json')
     .reply(200, { name: 'coverage', value: '89%' });
@@ -180,7 +180,7 @@ describe('services', () => {
     describe('codeclimate', () => {
         it('should fetch coverage for a GitHub repository', async () => {
             nock('https://img.shields.io')
-            .get('/codeclimate/coverage/github/IndigoUnited/node-planify.json')
+            .get('/codeclimate/coverage/IndigoUnited/node-planify.json')
             .reply(200, { name: 'coverage', value: '88%' });
 
             const coverage = await fetchCoverage('git@github.com:IndigoUnited/node-planify.git', { services: ['codeclimate'] });
@@ -191,7 +191,7 @@ describe('services', () => {
 
         it('should fetch coverage for a Bitbucket repository', async () => {
             nock('https://img.shields.io')
-            .get('/codeclimate/coverage/bitbucket/IndigoUnited/node-planify.json')
+            .get('/codeclimate/coverage/IndigoUnited/node-planify.json')
             .reply(200, { name: 'coverage', value: '88%' });
 
             const coverage = await fetchCoverage('git@bitbucket.org:IndigoUnited/node-planify.git', { services: ['codeclimate'] });
@@ -202,7 +202,7 @@ describe('services', () => {
 
         it('should fetch coverage for a GitLab repository', async () => {
             nock('https://img.shields.io')
-            .get('/codeclimate/coverage/gitlab/IndigoUnited/node-planify.json')
+            .get('/codeclimate/coverage/IndigoUnited/node-planify.json')
             .reply(200, { name: 'coverage', value: '88%' });
 
             const coverage = await fetchCoverage('git@gitlab.com:IndigoUnited/node-planify.git', { services: ['codeclimate'] });
@@ -213,7 +213,7 @@ describe('services', () => {
 
         it('should not support branches', async () => {
             nock('https://img.shields.io')
-            .get('/codeclimate/coverage/bitbucket/IndigoUnited/node-planify.json')
+            .get('/codeclimate/coverage/IndigoUnited/node-planify.json')
             .reply(200, { name: 'coverage', value: '88%' });
 
             const coverage = await fetchCoverage('git@bitbucket.org:IndigoUnited/node-planify.git',
