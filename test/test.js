@@ -8,7 +8,7 @@ afterEach(() => {
     nock.cleanAll();
 });
 
-it('should return null if repository is not supported or if the URL is malformed', async () => {
+it('should return null if repository is not supported or if the URL is malformed or response is not json', async () => {
     nock.disableNetConnect();
 
     let promise = fetchCoverage('git@foo.com:user/project.git');
@@ -18,6 +18,16 @@ it('should return null if repository is not supported or if the URL is malformed
     expect(coverage).toBe(null);
 
     promise = fetchCoverage('git://github.com/balderdashy/waterline-%s.git');
+    coverage = await promise;
+
+    expect(promise instanceof Promise).toBe(true);
+    expect(coverage).toBe(null);
+
+    nock('https://img.shields.io')
+    .get('/codecov/c/github/user/project.json')
+    .reply(200, '<this is not json>');
+
+    promise = fetchCoverage('git@github.com:user/project.git', { services: ['codecov'] });
     coverage = await promise;
 
     expect(promise instanceof Promise).toBe(true);
