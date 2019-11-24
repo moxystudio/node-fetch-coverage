@@ -3,10 +3,10 @@
 [![NPM version][npm-image]][npm-url] [![Downloads][downloads-image]][npm-url] [![Build Status][travis-image]][travis-url] [![Coverage Status][codecov-image]][codecov-url] [![Dependency status][david-dm-image]][david-dm-url] [![Dev Dependency status][david-dm-dev-image]][david-dm-dev-url]
 
 [npm-url]:https://npmjs.org/package/fetch-coverage
-[downloads-image]:http://img.shields.io/npm/dm/fetch-coverage.svg
-[npm-image]:http://img.shields.io/npm/v/fetch-coverage.svg
+[downloads-image]:https://img.shields.io/npm/dm/fetch-coverage.svg
+[npm-image]:https://img.shields.io/npm/v/fetch-coverage.svg
 [travis-url]:https://travis-ci.org/moxystudio/node-fetch-coverage
-[travis-image]:http://img.shields.io/travis/moxystudio/node-fetch-coverage/master.svg
+[travis-image]:https://img.shields.io/travis/moxystudio/node-fetch-coverage/master.svg
 [codecov-url]:https://codecov.io/gh/moxystudio/node-fetch-coverage
 [codecov-image]:https://img.shields.io/codecov/c/github/moxystudio/node-fetch-coverage/master.svg
 [david-dm-url]:https://david-dm.org/moxystudio/node-fetch-coverage
@@ -60,4 +60,4 @@ $ npm test -- --watch # during development
 
 ## License
 
-Released under the [MIT License](http://www.opensource.org/licenses/mit-license.php).
+Released under the [MIT License](https://www.opensource.org/licenses/mit-license.php).
